@@ -1,0 +1,32 @@
+package UI;
+import java.util.Scanner;
+import javax.sound.sampled.SourceDataLine;
+
+import Services.Registro;
+
+public class MainMenu {
+    public static void mainMenu(){
+    Scanner sca = new Scanner(System.in);
+    System.out.println( "= = = Bienvenido = = =" );
+    System.out.println("1. Registro ");
+    System.out.println("2. Iniciar sesion ");
+    System.out.println("-----------------------");
+    System.out.println("0. Salir ");
+    
+    int opt = sca.nextInt();
+    switch (opt) {
+        case 0:
+            System.out.println("Saliendo.... ");
+            break;
+        case 1:
+            Registro.registrarUsuario();
+            break;
+        case 2:
+
+            break;
+        default:
+            System.out.println("Dato no valido");
+            break;
+    }
+    }
+}
